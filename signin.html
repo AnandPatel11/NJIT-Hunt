@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- existing head content -->
+</head>
+<body>
+    <!-- existing body content -->
+    <form id="signinForm" action="/api/signin" method="post">
+        <input type="text" id="username" name="username" placeholder="Username" required>
+        <input type="password" id="password" name="password" placeholder="Password" required>
+        <button type="submit">Sign In</button>
+    </form>
+    <!-- existing body content -->
+
+   <!-- <script>
+        // This function is triggered when the user submits the sign-in form
+        function handleSignIn(event) {
+            event.preventDefault();
+    
+            // Fetch values from the sign-in form
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+    
+            // Call your API to authenticate
+            fetch('/api/signin', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ username, password })
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    // If sign-in was successful, redirect to homepage
+                    window.location.href = '/';
+                } else {
+                    // Handle error (show message to user or something similar)
+                    alert(data.message);
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+            });
+        }
+    
+        // Attach the above function to your form's submit event
+        document.getElementById('signinForm').addEventListener('submit', handleSignIn);
+    </script>
+    -->
+
+</body>
+</html>

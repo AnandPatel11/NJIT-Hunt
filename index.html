@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>NJIT Random Task Generator</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+    <body>
+        <header>
+            <div class="logo-header">
+                <img src="NJIT_Highlanders_logo.png" alt="NJIT Logo" class="logo-img">
+                <h1>NJIT Random Task Generator</h1>
+                <span class="current-user" id="currentUsername"></span>
+            </div>
+        </header>
+        <nav class="navbar">
+            <a href="index.html">Home</a>
+            <a href="building.html">Building</a>
+            <a href="landmark.html">Landmark</a>
+            <a href="sport.html">Sport</a>
+            <a href="faculty.html">Faculty</a>
+            <a href="study.html">Study</a>
+            <a href="food.html">Food</a>
+            <a href="signup.html">Sign Up</a>
+            <a href="signin.html">Sign In</a>
+        </nav>
+        <div class="challenge-container">
+            <div class="challenge-card">
+                <h2>Welcome to the NJIT Random Task Generator!</h2>
+                <p>Click on one of the categories above to generate a random task related to NJIT.</p>
+            </div>
+        </div>
+        <footer>
+            <p>© 2023 Anand Patel anp8@njit.edu</p>
+        </footer>
+        <script>
+            // Fetch the current user and display their name
+            function fetchCurrentUser() {
+                fetch('/api/current_user')
+                .then(response => response.json())
+                .then(data => {
+                    if (data.loggedIn) {
+                        // Display the logged-in user's name
+                        document.getElementById('currentUsername').innerText = data.username;
+                    }
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                });
+            }
+            fetchCurrentUser();
+        </script>
+        <script src="script.js"></script>
+    </body>
+</html>

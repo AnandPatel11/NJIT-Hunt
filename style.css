@@ -1,0 +1,140 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+    padding: 0 15px;
+}
+
+header {
+    background-color: #C8102E; 
+    color: #ffffff;
+    padding: 30px;
+    margin-bottom: 30px;
+    position: relative; /* Added to position the username */
+}
+
+.logo-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    text-align: center;
+}
+
+.logo-img {
+    width: 80px;
+    height: auto;
+}
+
+header h1 {
+    font-size: 2.5em;
+}
+
+.navbar {
+    background-color: #000000; 
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+.navbar a {
+    float: left;
+    display: block;
+    color: #ffffff;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 1.2em;
+}
+
+.navbar a:hover {
+    background-color: #C8102E; 
+}
+
+.challenge-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+.challenge-card {
+    border: 2px solid #C8102E; 
+    border-radius: 10px;
+    width: 300px;
+    padding: 20px;
+    margin: 20px;
+    text-align: center;
+    background-color: #f0f0f0;
+}
+
+.challenge-card h2 {
+    color: #C8102E; 
+    font-size: 1.8em;
+    margin-bottom: 15px;
+}
+
+.challenge-card p {
+    font-size: 1.2em;
+    margin-bottom: 15px;
+}
+
+button {
+    padding: 10px 20px;
+    margin-top: 20px;
+    border: none;
+    color: #ffffff;
+    background-color: #C8102E;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.2em;
+}
+
+button:hover {
+    background-color: #000000;
+}
+
+footer {
+    background-color: #C8102E;
+    color: #ffffff;
+    text-align: center;
+    padding: 20px;
+    margin-top: 20px;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+/* New styles for the current user's username */
+.current-user {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    font-size: 1.4em;
+}
+
+@media screen and (max-width: 600px) {
+    .navbar a {
+        float: none;
+        width: 100%;
+    }
+
+    .challenge-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .challenge-card {
+        width: 90%;
+        min-height: 100vh;
+        box-sizing: border-box;
+    }
+
+    .logo-img {
+        width: 60px;
+    }
+
+    .current-user {
+        top: 10px;
+        right: 10px;
+        font-size: 1.2em;
+    }
+}
